@@ -1,0 +1,92 @@
+\doxysection{playerwindow.\+h}
+\hypertarget{playerwindow_8h_source}{}\label{playerwindow_8h_source}\mbox{\hyperlink{playerwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PLAYERWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PLAYERWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{jsonsimplifier_8h}{jsonsimplifier.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{fieldgenerator_8h}{fieldgenerator.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_status_value}{StatusValue}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_status_value_ad3b6e832dbc30e7f8ae3fa01daf87464}{isMine}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_status_value_af9c6282c9d1345a81e44cb5c4b5eaff1}{isActivated}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_status_value_a265a450c0db2938a9871f5a368577922}{isFlaged}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00021\ \ \ \ \ QPushButton*\ \mbox{\hyperlink{struct_status_value_a25e8b355944da8a56dd0e3c9c1265cf4}{button}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_status_value_af15c4b0268a56f70fb1934d3bce46cd9}{value}};}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_window}{PlayerWindow}};}
+\DoxyCodeLine{00027\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_window}{PlayerWindow}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_player_window}{PlayerWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_player_window_a30da8c18bb9e9b1167ad079e090c9c8a}{\string~PlayerWindow}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_window_a439c0cba5af25869d0bf4bb4d581a1da}{on\_pushButton\_clicked}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_window_a26781cee2561100d24f41e01d7fb8c49}{on\_Restart\_clicked}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_window_a86dd82ba4fc65926942e56e4a2208b38}{on\_resetScore\_clicked}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ Ui::PlayerWindow\ *\mbox{\hyperlink{class_player_window_aa2298f3805a7f7589089c39952455707}{ui}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_player_window_a9576fa73be6b7cf897b91746a246bcec}{ableToPlay}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ QJsonObject\ \mbox{\hyperlink{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1}{jsonObj}}\ =\ \mbox{\hyperlink{jsonsimplifier_8cpp_ac602d6f0b6719d9ee8626e90cfebb438}{readDataJsonFile}}(\textcolor{stringliteral}{"{}data.json"{}});}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_window_a473411db3c15dd3b4b05aec43268491f}{width}}\ =\ \mbox{\hyperlink{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1}{jsonObj}}[\textcolor{stringliteral}{"{}width"{}}].toInt();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_window_a2163b579e151388cd5e3eb57e126b5e3}{height}}\ =\ \mbox{\hyperlink{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1}{jsonObj}}[\textcolor{stringliteral}{"{}height"{}}].toInt();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_window_a59d1c7c630724fa44413592d481611ec}{staticMineCounter}}\ =\ \mbox{\hyperlink{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1}{jsonObj}}[\textcolor{stringliteral}{"{}mineCount"{}}].toInt();}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_window_a2cc6c417e67bcd9f6a8110127218f4ff}{mineCounter}}\ =\ \mbox{\hyperlink{class_player_window_a59d1c7c630724fa44413592d481611ec}{staticMineCounter}};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_window_a075a89b428e51363297961fbfb8e0475}{cellCounter}}\ =\ \mbox{\hyperlink{class_player_window_a473411db3c15dd3b4b05aec43268491f}{width}}\ *\ \mbox{\hyperlink{class_player_window_a2163b579e151388cd5e3eb57e126b5e3}{height}}\ -\/\ \mbox{\hyperlink{class_player_window_a2cc6c417e67bcd9f6a8110127218f4ff}{mineCounter}};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00112\ \ \ \ \ std::vector<std::vector<int>>\ \mbox{\hyperlink{class_player_window_a65133782a248355c7af98dd3e01e08c3}{field}}\ =\ \mbox{\hyperlink{fieldgenerator_8cpp_a30c9658a2cecbcb8e39e7f45bfe30bf4}{generateMineField}}(\mbox{\hyperlink{class_player_window_a473411db3c15dd3b4b05aec43268491f}{width}},\ \mbox{\hyperlink{class_player_window_a2163b579e151388cd5e3eb57e126b5e3}{height}},\ \mbox{\hyperlink{class_player_window_a2cc6c417e67bcd9f6a8110127218f4ff}{mineCounter}});}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00117\ \ \ \ \ std::vector<std::vector<StatusValue>>\ \mbox{\hyperlink{class_player_window_afd55b8565bb39d93f681a8bd816c3c25}{statusField}};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_window_a8e4213f1c71121a0621a72e482134d48}{clearField}}();}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_window_a5d935b811a113df67f7d718c91c0de65}{gameLost}}();}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_window_ab51ab578dddfae98b9704b2d8a73a9d2}{gameWon}}();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_window_a70e1c6dc2ccef6867fc839e9acdbe95e}{setStateBlank}}(\textcolor{keywordtype}{int}\ xCord,\ \textcolor{keywordtype}{int}\ yCord);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_window_a2beedd41841950e068ad1fc02b7e7c9a}{setStateActive}}(\textcolor{keywordtype}{int}\ xCord,\ \textcolor{keywordtype}{int}\ yCord);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_window_a789e887d1c4b6167b85b1e0bc6d27013}{setStateFlaged}}(\textcolor{keywordtype}{int}\ xCord,\ \textcolor{keywordtype}{int}\ yCord);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_window_a0dee480ab42984b9489d27ae24c4fc75}{revialNeighbour}}(\textcolor{keywordtype}{int}\ xCord,\ \textcolor{keywordtype}{int}\ yCord,\ \textcolor{keywordtype}{int}\ maxWidth,\ \textcolor{keywordtype}{int}\ maxHeight);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_window_a184460cb035255149c0d8425a48f5191}{updateField}}(std::vector<std::vector<int>>\&\ \mbox{\hyperlink{class_player_window_a65133782a248355c7af98dd3e01e08c3}{field}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_window_a473411db3c15dd3b4b05aec43268491f}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_window_a2163b579e151388cd5e3eb57e126b5e3}{height}});}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00181\ std::vector<std::vector<StatusValue>>\ \mbox{\hyperlink{playerwindow_8h_a277b9478b6551d22454fcafdb9371e95}{genrateStatusField}}(\textcolor{keywordtype}{int}\ fieldWidth,\ \textcolor{keywordtype}{int}\ fieldHeight,\ std::vector<std::vector<int>>\ mineField);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00187\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{playerwindow_8h_a9fc75ff4639a7deea1e2a68b36dfc73c}{clearStatusField}}(std::vector<std::vector<StatusValue>>\&\ statusField);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLAYERWINDOW\_H}}
+
+\end{DoxyCode}

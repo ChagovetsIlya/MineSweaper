@@ -1,0 +1,87 @@
+\doxysection{playerwindow.\+h File Reference}
+\hypertarget{playerwindow_8h}{}\label{playerwindow_8h}\index{playerwindow.h@{playerwindow.h}}
+{\ttfamily \#include \"{}jsonsimplifier.\+h\"{}}\newline
+{\ttfamily \#include \"{}fieldgenerator.\+h\"{}}\newline
+{\ttfamily \#include $<$QDebug$>$}\newline
+{\ttfamily \#include $<$QJson\+Object$>$}\newline
+{\ttfamily \#include $<$QPush\+Button$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$QDialog$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_status_value}{Status\+Value}}
+\begin{DoxyCompactList}\small\item\em Структура, представляющая состояние кнопки игрового поля. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_player_window}{Player\+Window}}
+\begin{DoxyCompactList}\small\item\em Класс, представляющий окно игрока. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_ui}{Ui}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_status_value}{Status\+Value}} $>$ $>$ \mbox{\hyperlink{playerwindow_8h_a277b9478b6551d22454fcafdb9371e95}{genrate\+Status\+Field}} (int field\+Width, int field\+Height, std\+::vector$<$ std\+::vector$<$ int $>$ $>$ mine\+Field)
+\begin{DoxyCompactList}\small\item\em Генерирует поле состояния для игрового поля. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{playerwindow_8h_a9fc75ff4639a7deea1e2a68b36dfc73c}{clear\+Status\+Field}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_status_value}{Status\+Value}} $>$ $>$ \&status\+Field)
+\begin{DoxyCompactList}\small\item\em Очищает поле состояния игрового поля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{playerwindow_8h_a9fc75ff4639a7deea1e2a68b36dfc73c}\label{playerwindow_8h_a9fc75ff4639a7deea1e2a68b36dfc73c} 
+\index{playerwindow.h@{playerwindow.h}!clearStatusField@{clearStatusField}}
+\index{clearStatusField@{clearStatusField}!playerwindow.h@{playerwindow.h}}
+\doxysubsubsection{\texorpdfstring{clearStatusField()}{clearStatusField()}}
+{\footnotesize\ttfamily void clear\+Status\+Field (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_status_value}{Status\+Value}} $>$ $>$ \&}]{status\+Field }\end{DoxyParamCaption})}
+
+
+
+Очищает поле состояния игрового поля. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status\+Field} & Ссылка на вектор векторов, представляющий поле состояния.\\
+\hline
+\end{DoxyParams}
+Очищает поле состояния игрового поля.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status\+Field} & Поле статуса, которое нужно очистить. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{playerwindow_8h_a277b9478b6551d22454fcafdb9371e95}\label{playerwindow_8h_a277b9478b6551d22454fcafdb9371e95} 
+\index{playerwindow.h@{playerwindow.h}!genrateStatusField@{genrateStatusField}}
+\index{genrateStatusField@{genrateStatusField}!playerwindow.h@{playerwindow.h}}
+\doxysubsubsection{\texorpdfstring{genrateStatusField()}{genrateStatusField()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_status_value}{Status\+Value}} $>$ $>$ genrate\+Status\+Field (\begin{DoxyParamCaption}\item[{int}]{field\+Width,  }\item[{int}]{field\+Height,  }\item[{std\+::vector$<$ std\+::vector$<$ int $>$ $>$}]{field }\end{DoxyParamCaption})}
+
+
+
+Генерирует поле состояния для игрового поля. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em field\+Width} & Ширина игрового поля. \\
+\hline
+{\em field\+Height} & Высота игрового поля. \\
+\hline
+{\em mine\+Field} & Игровое поле с минами. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Вектор векторов, представляющий поле состояния.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em field\+Width} & Ширина игрового поля. \\
+\hline
+{\em field\+Height} & Высота игрового поля. \\
+\hline
+{\em field} & Вектор векторов, представляющий поле значений. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает вектор векторов, представляющий поле состояния. 
+\end{DoxyReturn}

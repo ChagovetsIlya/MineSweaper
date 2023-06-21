@@ -1,0 +1,107 @@
+\doxysection{fieldgenerator.\+h File Reference}
+\hypertarget{fieldgenerator_8h}{}\label{fieldgenerator_8h}\index{fieldgenerator.h@{fieldgenerator.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{fieldgenerator_8h_a30c9658a2cecbcb8e39e7f45bfe30bf4}{generate\+Mine\+Field}} (int field\+Width, int field\+Height, int mine\+Count)
+\begin{DoxyCompactList}\small\item\em Генерирует поле с минами. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fieldgenerator_8h_a86be7062e49aa041c71c047829861721}{update\+Field\+Values}} (std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \&field)
+\begin{DoxyCompactList}\small\item\em Обновляет значения поля на основе расположения мин. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fieldgenerator_8h_ad94fddbcc4babf779f6cb59f1ccf6370}{get\+Random\+Number}} (int num)
+\begin{DoxyCompactList}\small\item\em Возвращает случайное число от 0 до num -\/ 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{fieldgenerator_8h_a30c9658a2cecbcb8e39e7f45bfe30bf4}\label{fieldgenerator_8h_a30c9658a2cecbcb8e39e7f45bfe30bf4} 
+\index{fieldgenerator.h@{fieldgenerator.h}!generateMineField@{generateMineField}}
+\index{generateMineField@{generateMineField}!fieldgenerator.h@{fieldgenerator.h}}
+\doxysubsubsection{\texorpdfstring{generateMineField()}{generateMineField()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ int $>$ $>$ generate\+Mine\+Field (\begin{DoxyParamCaption}\item[{int}]{field\+Width,  }\item[{int}]{field\+Height,  }\item[{int}]{mine\+Count }\end{DoxyParamCaption})}
+
+
+
+Генерирует поле с минами. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em field\+Width} & Ширина поля. \\
+\hline
+{\em field\+Height} & Высота поля. \\
+\hline
+{\em mine\+Count} & Количество мин. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Двумерный вектор, представляющий поле с минами.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em field\+Width} & Ширина поля. \\
+\hline
+{\em field\+Height} & Высота поля. \\
+\hline
+{\em mine\+Count} & Количество мин. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Двумерный вектор, представляющий поле с минами. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Если исходные данные невалидны. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{fieldgenerator_8h_ad94fddbcc4babf779f6cb59f1ccf6370}\label{fieldgenerator_8h_ad94fddbcc4babf779f6cb59f1ccf6370} 
+\index{fieldgenerator.h@{fieldgenerator.h}!getRandomNumber@{getRandomNumber}}
+\index{getRandomNumber@{getRandomNumber}!fieldgenerator.h@{fieldgenerator.h}}
+\doxysubsubsection{\texorpdfstring{getRandomNumber()}{getRandomNumber()}}
+{\footnotesize\ttfamily int get\+Random\+Number (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Возвращает случайное число от 0 до num -\/ 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Верхняя граница для случайного числа. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Случайное число.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Верхняя граница для случайного числа. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Случайное число. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Если num меньше 0. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{fieldgenerator_8h_a86be7062e49aa041c71c047829861721}\label{fieldgenerator_8h_a86be7062e49aa041c71c047829861721} 
+\index{fieldgenerator.h@{fieldgenerator.h}!updateFieldValues@{updateFieldValues}}
+\index{updateFieldValues@{updateFieldValues}!fieldgenerator.h@{fieldgenerator.h}}
+\doxysubsubsection{\texorpdfstring{updateFieldValues()}{updateFieldValues()}}
+{\footnotesize\ttfamily void update\+Field\+Values (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \&}]{field }\end{DoxyParamCaption})}
+
+
+
+Обновляет значения поля на основе расположения мин. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & Двумерный вектор, представляющий поле с минами.\\
+\hline
+{\em field} & Двумерный вектор, представляющий поле с минами. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Если на поле присутствуют невалидные значения. \\
+\hline
+\end{DoxyExceptions}

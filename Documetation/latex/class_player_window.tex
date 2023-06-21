@@ -1,0 +1,396 @@
+\doxysection{Player\+Window Class Reference}
+\hypertarget{class_player_window}{}\label{class_player_window}\index{PlayerWindow@{PlayerWindow}}
+
+
+Класс, представляющий окно игрока.  
+
+
+
+
+{\ttfamily \#include $<$playerwindow.\+h$>$}
+
+Inheritance diagram for Player\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_window_a439c0cba5af25869d0bf4bb4d581a1da}{on\+\_\+push\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик события нажатия кнопки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_window_a26781cee2561100d24f41e01d7fb8c49}{on\+\_\+\+Restart\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик события нажатия кнопки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_window_a86dd82ba4fc65926942e56e4a2208b38}{on\+\_\+reset\+Score\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик события нажатия кнопки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_window_ac3f39b885601f998a299d64cb76d178e}{Player\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_player_window}{Player\+Window}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player_window_a30da8c18bb9e9b1167ad079e090c9c8a}{\texorpdfstring{$\sim$}{\string~}\+Player\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор класса \doxylink{class_player_window}{Player\+Window}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_window_a8e4213f1c71121a0621a72e482134d48}{clear\+Field}} ()
+\begin{DoxyCompactList}\small\item\em Очищает игровое поле. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_window_a5d935b811a113df67f7d718c91c0de65}{game\+Lost}} ()
+\begin{DoxyCompactList}\small\item\em Обрабатывает событие поражения в игре. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_window_ab51ab578dddfae98b9704b2d8a73a9d2}{game\+Won}} ()
+\begin{DoxyCompactList}\small\item\em Обрабатывает событие победы в игре. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_window_a70e1c6dc2ccef6867fc839e9acdbe95e}{set\+State\+Blank}} (int x\+Cord, int y\+Cord)
+\begin{DoxyCompactList}\small\item\em Устанавливает состояние клетки на пустое. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_window_a2beedd41841950e068ad1fc02b7e7c9a}{set\+State\+Active}} (int x\+Cord, int y\+Cord)
+\begin{DoxyCompactList}\small\item\em Устанавливает состояние активной клетки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_window_a789e887d1c4b6167b85b1e0bc6d27013}{set\+State\+Flaged}} (int x\+Cord, int y\+Cord)
+\begin{DoxyCompactList}\small\item\em Устанавливает состояние флажка на клетке. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_window_a0dee480ab42984b9489d27ae24c4fc75}{revial\+Neighbour}} (int x\+Cord, int y\+Cord, int max\+Width, int max\+Height)
+\begin{DoxyCompactList}\small\item\em Раскрывает соседние клетки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_window_a184460cb035255149c0d8425a48f5191}{update\+Field}} (std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \&\mbox{\hyperlink{class_player_window_a65133782a248355c7af98dd3e01e08c3}{field}}, int \mbox{\hyperlink{class_player_window_a473411db3c15dd3b4b05aec43268491f}{width}}, int \mbox{\hyperlink{class_player_window_a2163b579e151388cd5e3eb57e126b5e3}{height}})
+\begin{DoxyCompactList}\small\item\em Обновляет отображение игрового поля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Player\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_window_aa2298f3805a7f7589089c39952455707}{ui}}
+\begin{DoxyCompactList}\small\item\em ui Указатель на объект пользовательского интерфейса. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_window_a9576fa73be6b7cf897b91746a246bcec}{able\+To\+Play}} = true
+\begin{DoxyCompactList}\small\item\em able\+To\+Play Флаг, определяющий возможность игры. \end{DoxyCompactList}\item 
+QJson\+Object \mbox{\hyperlink{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1}{json\+Obj}} = \mbox{\hyperlink{jsonsimplifier_8cpp_ac602d6f0b6719d9ee8626e90cfebb438}{read\+Data\+Json\+File}}(\"{}data.\+json\"{})
+\begin{DoxyCompactList}\small\item\em json\+Obj Объект JSON, содержащий данные из файла \"{}data.\+json\"{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_window_a473411db3c15dd3b4b05aec43268491f}{width}} = \mbox{\hyperlink{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1}{json\+Obj}}\mbox{[}\"{}width\"{}\mbox{]}.to\+Int()
+\begin{DoxyCompactList}\small\item\em width Ширина игрового поля. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_window_a2163b579e151388cd5e3eb57e126b5e3}{height}} = \mbox{\hyperlink{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1}{json\+Obj}}\mbox{[}\"{}height\"{}\mbox{]}.to\+Int()
+\begin{DoxyCompactList}\small\item\em height Высота игрового поля. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_window_a59d1c7c630724fa44413592d481611ec}{static\+Mine\+Counter}} = \mbox{\hyperlink{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1}{json\+Obj}}\mbox{[}\"{}mine\+Count\"{}\mbox{]}.to\+Int()
+\begin{DoxyCompactList}\small\item\em static\+Mine\+Counter Статическое количество мин на игровом поле. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_window_a2cc6c417e67bcd9f6a8110127218f4ff}{mine\+Counter}} = \mbox{\hyperlink{class_player_window_a59d1c7c630724fa44413592d481611ec}{static\+Mine\+Counter}}
+\begin{DoxyCompactList}\small\item\em mine\+Counter Количество оставшихся мин на игровом поле. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_window_a075a89b428e51363297961fbfb8e0475}{cell\+Counter}} = \mbox{\hyperlink{class_player_window_a473411db3c15dd3b4b05aec43268491f}{width}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_window_a2163b579e151388cd5e3eb57e126b5e3}{height}} -\/ \mbox{\hyperlink{class_player_window_a2cc6c417e67bcd9f6a8110127218f4ff}{mine\+Counter}}
+\begin{DoxyCompactList}\small\item\em cell\+Counter Количество оставшихся неоткрытых клеток на игровом поле. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{class_player_window_a65133782a248355c7af98dd3e01e08c3}{field}} = \mbox{\hyperlink{fieldgenerator_8cpp_a30c9658a2cecbcb8e39e7f45bfe30bf4}{generate\+Mine\+Field}}(\mbox{\hyperlink{class_player_window_a473411db3c15dd3b4b05aec43268491f}{width}}, \mbox{\hyperlink{class_player_window_a2163b579e151388cd5e3eb57e126b5e3}{height}}, \mbox{\hyperlink{class_player_window_a2cc6c417e67bcd9f6a8110127218f4ff}{mine\+Counter}})
+\begin{DoxyCompactList}\small\item\em field Двумерный вектор, представляющий игровое поле. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_status_value}{Status\+Value}} $>$ $>$ \mbox{\hyperlink{class_player_window_afd55b8565bb39d93f681a8bd816c3c25}{status\+Field}}
+\begin{DoxyCompactList}\small\item\em field Двумерный вектор, представляющий состояния ячеек поля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, представляющий окно игрока. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_player_window_ac3f39b885601f998a299d64cb76d178e}\label{class_player_window_ac3f39b885601f998a299d64cb76d178e} 
+\index{PlayerWindow@{PlayerWindow}!PlayerWindow@{PlayerWindow}}
+\index{PlayerWindow@{PlayerWindow}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{PlayerWindow()}{PlayerWindow()}}
+{\footnotesize\ttfamily Player\+Window\+::\+Player\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса \doxylink{class_player_window}{Player\+Window}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Указатель на родительский объект QWidget.\\
+\hline
+{\em parent} & Родительский виджет. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_window_a30da8c18bb9e9b1167ad079e090c9c8a}\label{class_player_window_a30da8c18bb9e9b1167ad079e090c9c8a} 
+\index{PlayerWindow@{PlayerWindow}!````~PlayerWindow@{\texorpdfstring{$\sim$}{\string~}PlayerWindow}}
+\index{````~PlayerWindow@{\texorpdfstring{$\sim$}{\string~}PlayerWindow}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PlayerWindow()}{\string~PlayerWindow()}}
+{\footnotesize\ttfamily Player\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Player\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор класса \doxylink{class_player_window}{Player\+Window}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_window_a8e4213f1c71121a0621a72e482134d48}\label{class_player_window_a8e4213f1c71121a0621a72e482134d48} 
+\index{PlayerWindow@{PlayerWindow}!clearField@{clearField}}
+\index{clearField@{clearField}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{clearField()}{clearField()}}
+{\footnotesize\ttfamily void Player\+Window\+::clear\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Очищает игровое поле. 
+
+\Hypertarget{class_player_window_a5d935b811a113df67f7d718c91c0de65}\label{class_player_window_a5d935b811a113df67f7d718c91c0de65} 
+\index{PlayerWindow@{PlayerWindow}!gameLost@{gameLost}}
+\index{gameLost@{gameLost}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{gameLost()}{gameLost()}}
+{\footnotesize\ttfamily void Player\+Window\+::game\+Lost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Обрабатывает событие поражения в игре. 
+
+Обрабатывает событие поражения игрока. \Hypertarget{class_player_window_ab51ab578dddfae98b9704b2d8a73a9d2}\label{class_player_window_ab51ab578dddfae98b9704b2d8a73a9d2} 
+\index{PlayerWindow@{PlayerWindow}!gameWon@{gameWon}}
+\index{gameWon@{gameWon}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{gameWon()}{gameWon()}}
+{\footnotesize\ttfamily void Player\+Window\+::game\+Won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Обрабатывает событие победы в игре. 
+
+Обрабатывает событие победы игрока. \Hypertarget{class_player_window_a439c0cba5af25869d0bf4bb4d581a1da}\label{class_player_window_a439c0cba5af25869d0bf4bb4d581a1da} 
+\index{PlayerWindow@{PlayerWindow}!on\_pushButton\_clicked@{on\_pushButton\_clicked}}
+\index{on\_pushButton\_clicked@{on\_pushButton\_clicked}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_clicked}{on\_pushButton\_clicked}}
+{\footnotesize\ttfamily void Player\+Window\+::on\+\_\+push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Обработчик события нажатия кнопки. 
+
+Слот для закрытия окна. \Hypertarget{class_player_window_a86dd82ba4fc65926942e56e4a2208b38}\label{class_player_window_a86dd82ba4fc65926942e56e4a2208b38} 
+\index{PlayerWindow@{PlayerWindow}!on\_resetScore\_clicked@{on\_resetScore\_clicked}}
+\index{on\_resetScore\_clicked@{on\_resetScore\_clicked}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{on\_resetScore\_clicked}{on\_resetScore\_clicked}}
+{\footnotesize\ttfamily void Player\+Window\+::on\+\_\+reset\+Score\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Обработчик события нажатия кнопки. 
+
+Обрабатывает нажатие кнопки сброса счета. \Hypertarget{class_player_window_a26781cee2561100d24f41e01d7fb8c49}\label{class_player_window_a26781cee2561100d24f41e01d7fb8c49} 
+\index{PlayerWindow@{PlayerWindow}!on\_Restart\_clicked@{on\_Restart\_clicked}}
+\index{on\_Restart\_clicked@{on\_Restart\_clicked}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{on\_Restart\_clicked}{on\_Restart\_clicked}}
+{\footnotesize\ttfamily void Player\+Window\+::on\+\_\+\+Restart\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Обработчик события нажатия кнопки. 
+
+Слот для перезапуска игры. \Hypertarget{class_player_window_a0dee480ab42984b9489d27ae24c4fc75}\label{class_player_window_a0dee480ab42984b9489d27ae24c4fc75} 
+\index{PlayerWindow@{PlayerWindow}!revialNeighbour@{revialNeighbour}}
+\index{revialNeighbour@{revialNeighbour}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{revialNeighbour()}{revialNeighbour()}}
+{\footnotesize\ttfamily void Player\+Window\+::revial\+Neighbour (\begin{DoxyParamCaption}\item[{int}]{x\+Cord,  }\item[{int}]{y\+Cord,  }\item[{int}]{max\+Width,  }\item[{int}]{max\+Height }\end{DoxyParamCaption})}
+
+
+
+Раскрывает соседние клетки. 
+
+Раскрывает соседние кнопки при открытии пустой кнопки.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Cord} & Координата X клетки. \\
+\hline
+{\em y\+Cord} & Координата Y клетки. \\
+\hline
+{\em max\+Width} & Максимальная ширина игрового поля. \\
+\hline
+{\em max\+Height} & Максимальная высота игрового поля.\\
+\hline
+{\em x\+Cord} & Координата x кнопки. \\
+\hline
+{\em y\+Cord} & Координата y кнопки. \\
+\hline
+{\em max\+Width} & Максимальная ширина игрового поля. \\
+\hline
+{\em max\+Height} & Максимальная высота игрового поля. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_window_a2beedd41841950e068ad1fc02b7e7c9a}\label{class_player_window_a2beedd41841950e068ad1fc02b7e7c9a} 
+\index{PlayerWindow@{PlayerWindow}!setStateActive@{setStateActive}}
+\index{setStateActive@{setStateActive}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{setStateActive()}{setStateActive()}}
+{\footnotesize\ttfamily void Player\+Window\+::set\+State\+Active (\begin{DoxyParamCaption}\item[{int}]{x\+Cord,  }\item[{int}]{y\+Cord }\end{DoxyParamCaption})}
+
+
+
+Устанавливает состояние активной клетки. 
+
+Устанавливает состояние кнопки как активирована.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Cord} & Координата X клетки. \\
+\hline
+{\em y\+Cord} & Координата Y клетки.\\
+\hline
+{\em x\+Cord} & Координата x кнопки. \\
+\hline
+{\em y\+Cord} & Координата y кнопки. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_window_a70e1c6dc2ccef6867fc839e9acdbe95e}\label{class_player_window_a70e1c6dc2ccef6867fc839e9acdbe95e} 
+\index{PlayerWindow@{PlayerWindow}!setStateBlank@{setStateBlank}}
+\index{setStateBlank@{setStateBlank}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{setStateBlank()}{setStateBlank()}}
+{\footnotesize\ttfamily void Player\+Window\+::set\+State\+Blank (\begin{DoxyParamCaption}\item[{int}]{x\+Cord,  }\item[{int}]{y\+Cord }\end{DoxyParamCaption})}
+
+
+
+Устанавливает состояние клетки на пустое. 
+
+Устанавливает состояние кнопки как пустая.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Cord} & Координата X клетки. \\
+\hline
+{\em y\+Cord} & Координата Y клетки.\\
+\hline
+{\em x\+Cord} & Координата x кнопки. \\
+\hline
+{\em y\+Cord} & Координата y кнопки. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_window_a789e887d1c4b6167b85b1e0bc6d27013}\label{class_player_window_a789e887d1c4b6167b85b1e0bc6d27013} 
+\index{PlayerWindow@{PlayerWindow}!setStateFlaged@{setStateFlaged}}
+\index{setStateFlaged@{setStateFlaged}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{setStateFlaged()}{setStateFlaged()}}
+{\footnotesize\ttfamily void Player\+Window\+::set\+State\+Flaged (\begin{DoxyParamCaption}\item[{int}]{x\+Cord,  }\item[{int}]{y\+Cord }\end{DoxyParamCaption})}
+
+
+
+Устанавливает состояние флажка на клетке. 
+
+Устанавливает состояние кнопки как отмеченную флагом.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Cord} & Координата X клетки. \\
+\hline
+{\em y\+Cord} & Координата Y клетки.\\
+\hline
+{\em x\+Cord} & Координата x кнопки. \\
+\hline
+{\em y\+Cord} & Координата y кнопки. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_window_a184460cb035255149c0d8425a48f5191}\label{class_player_window_a184460cb035255149c0d8425a48f5191} 
+\index{PlayerWindow@{PlayerWindow}!updateField@{updateField}}
+\index{updateField@{updateField}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{updateField()}{updateField()}}
+{\footnotesize\ttfamily void Player\+Window\+::update\+Field (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \&}]{field,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Обновляет отображение игрового поля. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & Игровое поле. \\
+\hline
+{\em width} & Ширина игрового поля. \\
+\hline
+{\em height} & Высота игрового поля. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_player_window_a9576fa73be6b7cf897b91746a246bcec}\label{class_player_window_a9576fa73be6b7cf897b91746a246bcec} 
+\index{PlayerWindow@{PlayerWindow}!ableToPlay@{ableToPlay}}
+\index{ableToPlay@{ableToPlay}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{ableToPlay}{ableToPlay}}
+{\footnotesize\ttfamily bool Player\+Window\+::able\+To\+Play = true}
+
+
+
+able\+To\+Play Флаг, определяющий возможность игры. 
+
+\Hypertarget{class_player_window_a075a89b428e51363297961fbfb8e0475}\label{class_player_window_a075a89b428e51363297961fbfb8e0475} 
+\index{PlayerWindow@{PlayerWindow}!cellCounter@{cellCounter}}
+\index{cellCounter@{cellCounter}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{cellCounter}{cellCounter}}
+{\footnotesize\ttfamily int Player\+Window\+::cell\+Counter = \mbox{\hyperlink{class_player_window_a473411db3c15dd3b4b05aec43268491f}{width}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_window_a2163b579e151388cd5e3eb57e126b5e3}{height}} -\/ \mbox{\hyperlink{class_player_window_a2cc6c417e67bcd9f6a8110127218f4ff}{mine\+Counter}}}
+
+
+
+cell\+Counter Количество оставшихся неоткрытых клеток на игровом поле. 
+
+\Hypertarget{class_player_window_a65133782a248355c7af98dd3e01e08c3}\label{class_player_window_a65133782a248355c7af98dd3e01e08c3} 
+\index{PlayerWindow@{PlayerWindow}!field@{field}}
+\index{field@{field}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{field}{field}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$int$>$ $>$ Player\+Window\+::field = \mbox{\hyperlink{fieldgenerator_8cpp_a30c9658a2cecbcb8e39e7f45bfe30bf4}{generate\+Mine\+Field}}(\mbox{\hyperlink{class_player_window_a473411db3c15dd3b4b05aec43268491f}{width}}, \mbox{\hyperlink{class_player_window_a2163b579e151388cd5e3eb57e126b5e3}{height}}, \mbox{\hyperlink{class_player_window_a2cc6c417e67bcd9f6a8110127218f4ff}{mine\+Counter}})}
+
+
+
+field Двумерный вектор, представляющий игровое поле. 
+
+\Hypertarget{class_player_window_a2163b579e151388cd5e3eb57e126b5e3}\label{class_player_window_a2163b579e151388cd5e3eb57e126b5e3} 
+\index{PlayerWindow@{PlayerWindow}!height@{height}}
+\index{height@{height}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int Player\+Window\+::height = \mbox{\hyperlink{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1}{json\+Obj}}\mbox{[}\"{}height\"{}\mbox{]}.to\+Int()}
+
+
+
+height Высота игрового поля. 
+
+\Hypertarget{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1}\label{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1} 
+\index{PlayerWindow@{PlayerWindow}!jsonObj@{jsonObj}}
+\index{jsonObj@{jsonObj}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{jsonObj}{jsonObj}}
+{\footnotesize\ttfamily QJson\+Object Player\+Window\+::json\+Obj = \mbox{\hyperlink{jsonsimplifier_8cpp_ac602d6f0b6719d9ee8626e90cfebb438}{read\+Data\+Json\+File}}(\"{}data.\+json\"{})}
+
+
+
+json\+Obj Объект JSON, содержащий данные из файла \"{}data.\+json\"{}. 
+
+\Hypertarget{class_player_window_a2cc6c417e67bcd9f6a8110127218f4ff}\label{class_player_window_a2cc6c417e67bcd9f6a8110127218f4ff} 
+\index{PlayerWindow@{PlayerWindow}!mineCounter@{mineCounter}}
+\index{mineCounter@{mineCounter}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{mineCounter}{mineCounter}}
+{\footnotesize\ttfamily int Player\+Window\+::mine\+Counter = \mbox{\hyperlink{class_player_window_a59d1c7c630724fa44413592d481611ec}{static\+Mine\+Counter}}}
+
+
+
+mine\+Counter Количество оставшихся мин на игровом поле. 
+
+\Hypertarget{class_player_window_a59d1c7c630724fa44413592d481611ec}\label{class_player_window_a59d1c7c630724fa44413592d481611ec} 
+\index{PlayerWindow@{PlayerWindow}!staticMineCounter@{staticMineCounter}}
+\index{staticMineCounter@{staticMineCounter}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{staticMineCounter}{staticMineCounter}}
+{\footnotesize\ttfamily int Player\+Window\+::static\+Mine\+Counter = \mbox{\hyperlink{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1}{json\+Obj}}\mbox{[}\"{}mine\+Count\"{}\mbox{]}.to\+Int()}
+
+
+
+static\+Mine\+Counter Статическое количество мин на игровом поле. 
+
+\Hypertarget{class_player_window_afd55b8565bb39d93f681a8bd816c3c25}\label{class_player_window_afd55b8565bb39d93f681a8bd816c3c25} 
+\index{PlayerWindow@{PlayerWindow}!statusField@{statusField}}
+\index{statusField@{statusField}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{statusField}{statusField}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{struct_status_value}{Status\+Value}}$>$ $>$ Player\+Window\+::status\+Field}
+
+
+
+field Двумерный вектор, представляющий состояния ячеек поля. 
+
+\Hypertarget{class_player_window_aa2298f3805a7f7589089c39952455707}\label{class_player_window_aa2298f3805a7f7589089c39952455707} 
+\index{PlayerWindow@{PlayerWindow}!ui@{ui}}
+\index{ui@{ui}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Player\+Window\texorpdfstring{$\ast$}{*} Player\+Window\+::ui}
+
+
+
+ui Указатель на объект пользовательского интерфейса. 
+
+\Hypertarget{class_player_window_a473411db3c15dd3b4b05aec43268491f}\label{class_player_window_a473411db3c15dd3b4b05aec43268491f} 
+\index{PlayerWindow@{PlayerWindow}!width@{width}}
+\index{width@{width}!PlayerWindow@{PlayerWindow}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int Player\+Window\+::width = \mbox{\hyperlink{class_player_window_a3a3eb13611957fa96c129d8d742bd4f1}{json\+Obj}}\mbox{[}\"{}width\"{}\mbox{]}.to\+Int()}
+
+
+
+width Ширина игрового поля. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{playerwindow_8h}{playerwindow.\+h}}\item 
+\mbox{\hyperlink{playerwindow_8cpp}{playerwindow.\+cpp}}\end{DoxyCompactItemize}

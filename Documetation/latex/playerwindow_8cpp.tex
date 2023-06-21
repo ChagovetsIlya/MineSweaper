@@ -1,0 +1,53 @@
+\doxysection{playerwindow.\+cpp File Reference}
+\hypertarget{playerwindow_8cpp}{}\label{playerwindow_8cpp}\index{playerwindow.cpp@{playerwindow.cpp}}
+{\ttfamily \#include \"{}playerwindow.\+h\"{}}\newline
+{\ttfamily \#include \"{}ui\+\_\+playerwindow.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{playerwindow_8cpp_a9fc75ff4639a7deea1e2a68b36dfc73c}{clear\+Status\+Field}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_status_value}{Status\+Value}} $>$ $>$ \&status\+Field)
+\begin{DoxyCompactList}\small\item\em Очищает поле статуса. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_status_value}{Status\+Value}} $>$ $>$ \mbox{\hyperlink{playerwindow_8cpp_a803d2fdc24b6cf4fcb91bbae624c4a4a}{genrate\+Status\+Field}} (int field\+Width, int field\+Height, std\+::vector$<$ std\+::vector$<$ int $>$ $>$ field)
+\begin{DoxyCompactList}\small\item\em Генерирует поле состояния для игрового поля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{playerwindow_8cpp_a9fc75ff4639a7deea1e2a68b36dfc73c}\label{playerwindow_8cpp_a9fc75ff4639a7deea1e2a68b36dfc73c} 
+\index{playerwindow.cpp@{playerwindow.cpp}!clearStatusField@{clearStatusField}}
+\index{clearStatusField@{clearStatusField}!playerwindow.cpp@{playerwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{clearStatusField()}{clearStatusField()}}
+{\footnotesize\ttfamily void clear\+Status\+Field (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_status_value}{Status\+Value}} $>$ $>$ \&}]{status\+Field }\end{DoxyParamCaption})}
+
+
+
+Очищает поле статуса. 
+
+Очищает поле состояния игрового поля.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status\+Field} & Поле статуса, которое нужно очистить. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{playerwindow_8cpp_a803d2fdc24b6cf4fcb91bbae624c4a4a}\label{playerwindow_8cpp_a803d2fdc24b6cf4fcb91bbae624c4a4a} 
+\index{playerwindow.cpp@{playerwindow.cpp}!genrateStatusField@{genrateStatusField}}
+\index{genrateStatusField@{genrateStatusField}!playerwindow.cpp@{playerwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{genrateStatusField()}{genrateStatusField()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_status_value}{Status\+Value}} $>$ $>$ genrate\+Status\+Field (\begin{DoxyParamCaption}\item[{int}]{field\+Width,  }\item[{int}]{field\+Height,  }\item[{std\+::vector$<$ std\+::vector$<$ int $>$ $>$}]{field }\end{DoxyParamCaption})}
+
+
+
+Генерирует поле состояния для игрового поля. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em field\+Width} & Ширина игрового поля. \\
+\hline
+{\em field\+Height} & Высота игрового поля. \\
+\hline
+{\em field} & Вектор векторов, представляющий поле значений. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает вектор векторов, представляющий поле состояния. 
+\end{DoxyReturn}

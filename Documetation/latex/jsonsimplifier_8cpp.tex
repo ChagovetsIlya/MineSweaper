@@ -1,0 +1,50 @@
+\doxysection{jsonsimplifier.\+cpp File Reference}
+\hypertarget{jsonsimplifier_8cpp}{}\label{jsonsimplifier_8cpp}\index{jsonsimplifier.cpp@{jsonsimplifier.cpp}}
+{\ttfamily \#include \"{}jsonsimplifier.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+QJson\+Object \mbox{\hyperlink{jsonsimplifier_8cpp_ac602d6f0b6719d9ee8626e90cfebb438}{read\+Data\+Json\+File}} (const QString \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Читает содержимое файла JSON и возвращает объект JSON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jsonsimplifier_8cpp_a7a84dc748cacfacca8513472d94b20ed}{update\+Json\+Value}} (const QString \&file\+Path, const QString \&key, const QJson\+Value \&value)
+\begin{DoxyCompactList}\small\item\em Обновляет значение переменной в файле JSON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{jsonsimplifier_8cpp_ac602d6f0b6719d9ee8626e90cfebb438}\label{jsonsimplifier_8cpp_ac602d6f0b6719d9ee8626e90cfebb438} 
+\index{jsonsimplifier.cpp@{jsonsimplifier.cpp}!readDataJsonFile@{readDataJsonFile}}
+\index{readDataJsonFile@{readDataJsonFile}!jsonsimplifier.cpp@{jsonsimplifier.cpp}}
+\doxysubsubsection{\texorpdfstring{readDataJsonFile()}{readDataJsonFile()}}
+{\footnotesize\ttfamily QJson\+Object read\+Data\+Json\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Читает содержимое файла JSON и возвращает объект JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу JSON. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Объект JSON. 
+\end{DoxyReturn}
+\Hypertarget{jsonsimplifier_8cpp_a7a84dc748cacfacca8513472d94b20ed}\label{jsonsimplifier_8cpp_a7a84dc748cacfacca8513472d94b20ed} 
+\index{jsonsimplifier.cpp@{jsonsimplifier.cpp}!updateJsonValue@{updateJsonValue}}
+\index{updateJsonValue@{updateJsonValue}!jsonsimplifier.cpp@{jsonsimplifier.cpp}}
+\doxysubsubsection{\texorpdfstring{updateJsonValue()}{updateJsonValue()}}
+{\footnotesize\ttfamily void update\+Json\+Value (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path,  }\item[{const QString \&}]{key,  }\item[{const QJson\+Value \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Обновляет значение переменной в файле JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу JSON. \\
+\hline
+{\em key} & Ключ переменной. \\
+\hline
+{\em value} & Новое значение переменной. \\
+\hline
+\end{DoxyParams}
